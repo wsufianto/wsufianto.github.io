@@ -1,5 +1,6 @@
 body {
     background-color: bisque;
+    background-size: cover;
 }
 
 h1 {
@@ -10,9 +11,9 @@ h1 {
 
 div {
     width: 100%;
-    margin: 5px;
+    margin: 10px;
     display: inline-block;
-    background-color: gray;
+    //background-color: gray;
 }
 
 div img {
@@ -20,16 +21,30 @@ div img {
     width: 40%;
 }
 
+div h3 {
+    color: blue;
+    padding-left: 30px;
+}
+
+div p {
+    padding-left: 30px;
+    width: 85%;
+    text-align: justify;
+}
+
 .box1 {
     float: left;
     width: 40%;
     padding: 10px;
 }
-/*
-.leftside {
-    //float: left;
+
+.box2 {
+    float: right;
+    width: 40%;
+    padding: 10px;
 }
 
+/*
 .rightside {
     float: right;
     background-color: cyan;
