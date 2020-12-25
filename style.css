@@ -13,7 +13,6 @@ div {
     width: 100%;
     margin: 10px;
     display: inline-block;
-    //background-color: gray;
 }
 
 div img {
@@ -43,9 +42,3 @@ div p {
     width: 40%;
     padding: 10px;
 }
-
-/*
-.rightside {
-    float: right;
-    background-color: cyan;
-}*/
