@@ -1,0 +1,36 @@
+body {
+    background-color: bisque;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+
+div {
+    width: 100%;
+    margin: 5px;
+    display: inline-block;
+    background-color: gray;
+}
+
+div img {
+    border-radius: 10%;
+    width: 40%;
+}
+
+.box1 {
+    float: left;
+    width: 40%;
+    padding: 10px;
+}
+/*
+.leftside {
+    //float: left;
+}
+
+.rightside {
+    float: right;
+    background-color: cyan;
+}*/
