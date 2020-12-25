@@ -17,6 +17,7 @@ div {
 
 div img {
     border-radius: 10%;
+    margin: 0 20px;
     width: 40%;
 }
 
@@ -27,7 +28,7 @@ div h3 {
 
 div p {
     padding-left: 30px;
-    width: 85%;
+    width: 80%;
     text-align: justify;
 }
 
