@@ -1,14 +1,96 @@
-body {
-    background-color: bisque;
-    background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    //background-color: bisque;
 }
 
+body {
+    background-color: bisque;
+}
+li, a, button {
+    font-family: 'Cutive Mono', monospace, serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(250, 249, 249);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: black;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: yellowgreen;
+}
+
+button {
+    padding: 10px;
+    background-color: rgba(10,222,14,1);
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(10,222,14,0.5);
+}
+/*
 h1 {
     text-align: center;
     margin: 2rem;
     padding: 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+}
+ 
+nav li {
+    float: left;
+    display: inline-block;
+    width: auto;
+    text-align: justify;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+ 
+}
+
+nav li a:hover {
+    background-color: cadetblue;
+}
+*/
 
 div {
     width: 100%;
