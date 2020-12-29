@@ -18,8 +18,17 @@ li, a, button {
     color: rgb(250, 249, 249);
 }
 
+.other_links {
+    margin: 30px;
+}
+
+.other_links a, li {
+    color: blue;
+}
+
 header {
     display: flex;
+    //flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
@@ -28,11 +37,15 @@ header {
 
 .nav_links {
     list-style: none;
+    //height: auto;
+    //background-color: sienna;
 }
 
 .nav_links li {
     display: inline-block;
     padding: 0px 20px;
+    //background-color: sienna;
+    //height: auto;
 }
 
 .nav_links li a {

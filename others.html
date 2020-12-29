@@ -8,28 +8,35 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wsufianto Page</title>
+    <title>Kiddo-Arts</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Using Jquery to load navigation bar into this page -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header>
-        <nav>
-            <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://wsufianto.github.io/reviewing-a-pull-request/" target="_blank">Game</a></li>
-                <li><a href="kids-gallery.html" target="_self">Kids-Gallery</a></li>
-                <li><a href="others.html">Others</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="#"><button>Contact</button></a>
-    </header>
 
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!-- navigation bar & its script to load it using Jquery-->
+
+    <h1> other useful links </h1>
+    <ul class="other_links">
+        <li><a href="https://mastery.games/post/the-difference-between-width-and-flex-basis/"> Flex-basis vs Weight Explanation </a></li>
+        <li><a href="https://devinduct.com/workshop/flexbox"> Flexbox Workshop </a></li>
+    </ul>
 </body>
 
 </html>
