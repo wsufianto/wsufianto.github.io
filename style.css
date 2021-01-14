@@ -29,6 +29,15 @@ a, .button-cta {
     }
 }
 
+.wallpaper {
+    background-image: url("resource/IMG_0548.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
 .other_links {
     margin: 30px;
 }
