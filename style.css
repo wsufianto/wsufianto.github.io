@@ -10,7 +10,7 @@ body {
     background-color: bisque;
 }
 
-li, a, button {
+a, button {
     font-family: 'Cutive Mono', monospace, serif;
     font-size: 16px;
     font-weight: bold;
@@ -22,38 +22,21 @@ li, a, button {
     margin: 30px;
 }
 
-.other_links a, li {
+.other_links a{
     color: blue;
 }
 
-header {
-    display: flex;
-    //flex-direction: column;
-    justify-content: space-between;
+nav {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
     align-items: center;
-    padding: 15px 10%;
+    padding: 15px 0;
     background-color: black;
 }
 
-.nav_links {
-    list-style: none;
-    //height: auto;
-    //background-color: sienna;
-}
-
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
-    //background-color: sienna;
-    //height: auto;
-}
-
-.nav_links li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover {
-    color: yellowgreen;
+a:hover {
+    color: lightgreen;
 }
 
 button {
@@ -77,6 +60,22 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.font-gill {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.kidscontainer {
+    background-color: mediumaquamarine;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*
 .gallery {
     width: 100%;
     margin: 10px;
@@ -113,3 +112,4 @@ h1 {
     width: 40%;
     padding: 10px;
 }
+*/
