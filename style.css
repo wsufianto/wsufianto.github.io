@@ -16,6 +16,7 @@ a, .button-cta {
     font-weight: bold;
     text-decoration: none;
     color: rgb(250, 249, 249);
+    line-height: normal;
 }
 
 .other_links {
@@ -33,7 +34,6 @@ a, .button-cta {
     align-items: center;
     padding: 15px 0;
     background-color: black;
-    line-height: normal;
 }
 
 a:hover {
