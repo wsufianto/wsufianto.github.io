@@ -12,25 +12,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
+    <!-- Using Jquery to load navigation bar into this page -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <header>
+        <div id="nav-placeholder">
+        </div>
 
-    <!--Navigation bar-->
-    <div id="nav-placeholder">
-    </div>
-
-    <script>
-        $(function () {
-            $("#nav-placeholder").load("navbar.html");
-        });
-    </script>
-    <!-- navigation bar & its script to load it using Jquery-->
-    
+        <script>
+            $(function () {
+                $("#nav-placeholder").load("navbar.html");
+            });
+        </script>
+        <!-- navigation bar & its script to load it using Jquery-->
+    </header>
     <div class="container">
         <div class="row m-3 p-3 border border-primary">
             <div class="col">
