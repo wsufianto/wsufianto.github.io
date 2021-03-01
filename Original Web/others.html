@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Other Links</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Using Jquery to load navigation bar into this page -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!-- navigation bar & its script to load it using Jquery-->
+
+    <h1> other useful links </h1>
+    <ul class="other_links">
+        <li><a href="https://mastery.games/post/the-difference-between-width-and-flex-basis/" target="_blank"> Flex-basis vs Weight Explanation </a></li>
+        <li><a href="https://devinduct.com/workshop/flexbox" target="_blank"> Flexbox Workshop </a></li>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"> Flexbox Guide </a></li>
+    </ul>
+    
+    <h1> for fun </h1>
+    <ul class="other_links">
+        <li><a href="https://wsufianto.github.io/teacozyexample/index1.html" target="_blank"> The Tea Cozy - codecademy </a></li>
+        <li><a href="https://wsufianto.github.io/html-practice-recipe/index.html" target="_blank"> Html Recipe Practice </a></li>
+        <li><a href="./exercise.html" target=""> Exercise 1 - Js </a></li>
+        <li><a href="./vegan.html" target=""> Exercise 2 - Vegan Restaurant </a></li>
+    </ul>
+
+</body>
+
+</html>
