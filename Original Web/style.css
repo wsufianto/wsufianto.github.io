@@ -30,6 +30,15 @@ a, .button-cta {
 }
 
 .wallpaper {
+    background-image: url("resource/bg-wsufianto-2.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+  
+.no-wallpaper {
     background-image: url("resource/bg-wsufianto-2.jpg");
     background-position: center center;
     background-repeat: no-repeat;
