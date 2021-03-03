@@ -10,7 +10,12 @@ body {
 
 /* set the background text to change color */
 .rainbow {
-  background: linear-gradient(88deg, rgba(0,0,0,1) 0%, rgba(134,147,161,1) 42%, rgba(171,193,159,1) 100%);
+  background: linear-gradient(
+    88deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(134, 147, 161, 1) 42%,
+    rgba(171, 193, 159, 1) 100%
+  );
   background-size: 1200% 1200%;
   -webkit-animation: BackgroundAnimation 8s ease infinite;
   animation: BackgroundAnimation 8s ease infinite;
@@ -23,16 +28,22 @@ body {
 .rainbow:hover {
   cursor: pointer;
   color: transparent;
-} 
+}
 
 /* to enable background color changing animation */
 .bg-transparent {
-  background-color: transparent!important;
+  background-color: transparent !important;
 }
 
 /* set the background color changing template */
 .bgstyle {
-  background: linear-gradient(76deg, rgba(46,62,93,1), rgba(90,154,189,1), rgba(88,153,150,1)) 0% 0% / 1200% 1200%;
+  background: linear-gradient(
+      76deg,
+      rgba(46, 62, 93, 1),
+      rgba(90, 154, 189, 1),
+      rgba(88, 153, 150, 1)
+    )
+    0% 0% / 1200% 1200%;
   /* background: linear-gradient(360deg, rgb(201, 96, 30), rgb(173, 26, 48), rgb(26, 92, 173), rgb(26, 173, 139)) 0% 0% / 1200% 1200%; */
   overflow: auto;
   background-size: 1200% 1200%;
@@ -62,93 +73,75 @@ body {
 
 /* border appears on hover for about & portfolio & skills button */
 .btnlink:hover {
-  background-color: rgb(38,90,195);
-} 
+  background-color: rgb(38, 90, 195);
+}
 
 /* remove link underline in icon */
 .digital a:link {
- text-decoration: none;
+  text-decoration: none;
 }
 
 /* display button link background color on hover */
 .logo:hover {
-  color: rgb(38,90,195) !important;
-  text-decoration-color: rgb(38,90,195);
+  color: rgb(38, 90, 195) !important;
+  text-decoration-color: rgb(38, 90, 195);
 }
 
 /* make skills background transparent & no border*/
 .skills li {
   background-color: transparent;
   padding-top: 0px;
-  padding-bottom: 0px;  
+  padding-bottom: 0px;
   border: none;
 }
 
-/* clock parts */
+/* clock style css */
+/* Set the clock size  */
 .clock {
-  border-radius: 50%;
-  background: url("../images/vectorpaint.svg") no-repeat center;
-  background-size: 88%;
-  height: 10em;
-  padding-bottom: 31%;
   position: relative;
-  width: 10em;
+  width: 12rem;
+  height: 12rem;
+  /* border: 0.6rem solid white;
+  border-radius: 50%; */
+  margin: auto;
+  padding: 1rem;
 }
 
-.minutes-container,
-.hours-container,
-.seconds-container {
+/* set the clock background */
+.clock-face {
+  background-image: url("../images/clock-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* set the clock hand */
+.clock-hand {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 50%;
+  height: 3px;
+  width: 40%;
+  left: 10%;
+  border-radius: 90%;
+  background-color: ghostwhite;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  /* transition: all 0.05s; */
+  /* transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1); */
 }
 
-.hours {
-  background:white;
-  height: 20%;
-  left: 48.75%;
-  position: absolute;
-  top: 30%;
-  transform-origin: 50% 100%;
-  width: 2.5%;
-}
-
-.minutes {
-  background:white;
-  height: 40%;
-  left: 49%;
-  position: absolute;
-  top: 10%;
-  transform-origin: 50% 100%;
-  width: 2%;
-}
-
+/* change the clock hand color for second */
 .seconds {
-  background: red;
-  height: 45%;
-  left: 49.5%;
-  position: absolute;
-  top: 14%;
-  transform-origin: 50% 80%;
-  width: 1%;
-  z-index: 8;
+  background-color: red;
 }
 
-@keyframes rotate {
-  100% {
-    transform: rotateZ(360deg);
-  }
+/* shorten the hour hand */
+.hours {
+  top: 50%;
+  height: 3px;
+  width: 30%;
+  left: 20%;
 }
-
-.hours-container {
-  animation: rotate 43200s infinite linear;
-}
-.minutes-container {
-  transition: transform 0.3s cubic-bezier(0.4, 2.08, 0.55, 0.44);
-}
-.seconds-container {
-  transition: transform 1s linear;
-}
-/* end of clock display setting */
+/* end of clock css style */

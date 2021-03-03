@@ -1,103 +1,28 @@
-/*
-  * Starts any clocks using the user's local time
-  * From: cssanimation.rocks/clocks Example
-  */
-const initLocalClocks = () => {
-    // Get the local time using JS
-    const date = new Date();
-    const seconds = date.getSeconds();
-    const minutes = date.getMinutes();
-    const hours = date.getHours();
-    console.log(date);
-    console.log(seconds);
-    console.log(minutes);
-    console.log(hours);
+/* Retrieve the dom for second, minute & hour */
+const secondHand = document.querySelector('.seconds');
+const minuteHand = document.querySelector('.minutes');
+const hourHand = document.querySelector('.hours');
 
-    // Create an object with each hand and it's angle in degrees
-    const hands = [
-        {
-            hand: 'hours',
-            angle: (hours * 30) + (minutes / 2),
-        },
-        {
-            hand: 'minutes',
-            angle: (minutes * 6),
-        },
-        {
-            hand: 'seconds',
-            angle: (seconds * 6),
-        },
-    ];
-    // Loop through each of these hands to set their angle
-    for (let j = 0; j < hands.length; j++) {
-        const elements = document.querySelectorAll(`.${hands[j].hand}`);
-        for (let k = 0; k < elements.length; k++) {
-            elements[k].style.webkitTransform = `rotateZ(${hands[j].angle}deg)`;
-            elements[k].style.transform = `rotateZ(${hands[j].angle}deg)`;
-            // If this is a minute hand, note the seconds position (to calculate minute position later)
-            if (hands[j].hand === 'minutes') {
-                elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
-            }
-        }
-    }
+/* set the time (hour, minute, second) for the clock */
+const setDate = () => {
+    // get a new date instance
+    const now = new Date();
+
+    // get the second from the date instance & set it to DOM
+    const second = now.getSeconds();
+    const secondDegree = ((second / 60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondDegree}deg)`;
+
+    // get the minute from the date instance & set it to DOM
+    const minute = now.getMinutes();
+    const minuteDegree = ((minute / 60) * 360) + 90;
+    minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
+
+    // get the hour from the date instance & set it to DOM
+    const hour = now.getHours();
+    const hourDegree = ((hour / 11) * 360) + 90;
+    hourHand.style.transform = `rotate(${hourDegree}deg)`;
 };
-/*
-   * Do the first minute's rotation
-   */
-function moveMinuteHands(containers) {
-    for (let i = 0; i < containers.length; i++) {
-        containers[i].style.webkitTransform = 'rotateZ(6deg)';
-        containers[i].style.transform = 'rotateZ(6deg)';
-    }
-    // Then continue with a 60 second interval
-    setInterval(() => {
-        for (let i = 0; i < containers.length; i++) {
-            if (containers[i].angle === undefined) {
-                containers[i].angle = 12;
-            } else {
-                containers[i].angle += 6;
-            }
-            containers[i].style.webkitTransform = `rotateZ(${containers[i].angle}deg)`;
-            containers[i].style.transform = `rotateZ(${containers[i].angle}deg)`;
-        }
-    }, 60000);
-}
 
-/*
- * Set a timeout for the first minute hand movement (less than 1 minute), then rotate it every minute after that
- */
-function setUpMinuteHands() {
-    // Find out how far into the minute we are
-    const containers = document.querySelectorAll('.minutes-container');
-    const secondAngle = containers[0].getAttribute('data-second-angle');
-    if (secondAngle > 0) {
-        // Set a timeout until the end of the current minute, to move the hand
-        const delay = (((360 - secondAngle) / 6) + 0.1) * 1000;
-        setTimeout(() => {
-            moveMinuteHands(containers);
-        }, delay);
-    }
-}
-
-/*
- * Move the second containers
- */
-function moveSecondHands() {
-    const containers = document.querySelectorAll('.seconds-container');
-    setInterval(() => {
-        for (let i = 0; i < containers.length; i++) {
-            if (containers[i].angle === undefined) {
-                containers[i].angle = 6;
-            } else {
-                containers[i].angle += 6;
-            }
-            containers[i].style.webkitTransform = `rotateZ(${containers[i].angle}deg)`;
-            containers[i].style.transform = `rotateZ(${containers[i].angle}deg)`;
-        }
-    }, 1000);
-}
-
-// init & run the clock.
-initLocalClocks();
-setUpMinuteHands();
-moveSecondHands();
+// Run the setDate function every 1 second
+setInterval(setDate, 1000);
