@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* set the background image & width  */
+body {
+    width: 100%;
+}    
+
+/* set container display to flex enabling key layout in the middle
+    if no support for webp picture format */
+.no-container {
+    background-image: linear-gradient(rgba(54, 53, 53, 0.5), rgba(102, 97, 97, 0.5)), url("../resource/IMG_0292.jp2");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* set container display to flex enabling key layout in the middle 
+    with webp picture format */
+.container {
+    background-image: linear-gradient(rgba(54, 53, 53, 0.5), rgba(102, 97, 97, 0.5)), url("../resource/IMG_0292.webp");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+        
+/* set the key & button display properties */
+.keybox {
+    margin: 1rem;
+    padding: 1rem 0.5rem;
+    background-color: rgba(0,0,0,0.5);
+    color: ghostwhite;
+    width: 6rem;
+    height: 6rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+    font-size: 2.2rem;
+    text-align: center;
+    transition: all .07s ease;
+}
+
+/* set the property for text underneath the key */
+.drumtype {
+    display:block;
+    color: orange;
+    font-size: 0.8rem;
+}
+
+/* class to simulate key pressed effect */
+.playing {
+    transform: scale(1.1);
+    color: orange;
+    border-color: orange;
+    box-shadow: 0 0 1.2rem #ffc600;
+}
