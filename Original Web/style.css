@@ -8,6 +8,7 @@
 
 body {
     background-color: bisque;
+    width: 100%;
 }
 
 a, .button-cta {
@@ -93,18 +94,7 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 /* DRUM-KIT CSS STYLING */
-/* set the background image & width  */
-.drum-body {
-    width: 100%;
-}    
-
 /* set container display to flex enabling key layout in the middle
     if no support for webp picture format */
 .no-container-drum {
