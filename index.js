@@ -21,7 +21,9 @@ const setDate = () => {
     // get the hour from the date instance & set it to DOM
     const hour = now.getHours();
     const hourDegree = ((hour / 12) * 360) + 90;
-    hourHand.style.transform = `rotate(${hourDegree}deg)`;
+    const houradjust = Math.floor(minute / 10) * 6;
+
+    hourHand.style.transform = `rotate(${hourDegree + houradjust}deg)`;
 };
 
 // Run the setDate function every 1 second
